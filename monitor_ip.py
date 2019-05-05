@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import re
 import requests
 import logging
 from lxml import etree
@@ -17,10 +18,12 @@ def jiankong():
         # "Accept-Encoding": "gzip, deflate, br",
         "Accept-Language": "zh-CN,zh;q=0.9"
     }
-    res = requests.get(url, headers=header).text
-    con = etree.HTML(res)
-    out_ip = str(con.xpath('//div[@id="result"]//p[1]/code/text()')[0])
-
+    res = requests.get(url).text
+    print(res)
+    # con = etree.HTML(res)
+    # out_ip = str(con.xpath('//div[@id="result"]//p[1]/code/text()')[0])
+    out_ip = re.search(r'Your IP</span>: (.*?)</span>', res).group(1)
+    print(out_ip)
     if out_ip != '36.110.118.7':
         send_mail()
 

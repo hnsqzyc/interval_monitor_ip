@@ -7,7 +7,7 @@ import logging
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',
-                    # filename='myapp.log',
+                    filename='myapp.log',
                     filemode='a')
 
 
@@ -21,5 +21,5 @@ def job():
     jiankong()
 
 scheduler = BlockingScheduler()
-scheduler.add_job(job, 'interval', seconds=600)
+scheduler.add_job(job, 'interval', minutes=1)
 scheduler.start()

@@ -1,0 +1,9 @@
+Tue, 23 Apr 2019 14:23:37 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Tue, 23 Apr 2019 14:23:37 base.py[line:881] INFO Added job "job" to job store "default"
+Tue, 23 Apr 2019 14:23:37 base.py[line:166] INFO Scheduler started
+Tue, 23 Apr 2019 14:24:06 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Tue, 23 Apr 2019 14:24:06 base.py[line:881] INFO Added job "job" to job store "default"
+Tue, 23 Apr 2019 14:24:06 base.py[line:166] INFO Scheduler started
+Tue, 23 Apr 2019 14:25:06 base.py[line:123] INFO Running job "job (trigger: interval[0:01:00], next run at: 2019-04-23 14:25:06 CST)" (scheduled at 2019-04-23 14:25:06.620107+08:00)
+Tue, 23 Apr 2019 14:25:09 monitor_ip.py[line:35] INFO 邮件发送成功...
+Tue, 23 Apr 2019 14:25:09 base.py[line:144] INFO Job "job (trigger: interval[0:01:00], next run at: 2019-04-23 14:26:06 CST)" executed successfully
